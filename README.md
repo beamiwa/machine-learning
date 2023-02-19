@@ -25,7 +25,18 @@ Setelah melakukan beberapa percobaan dengan mencoba 5 algoritma untuk menemukan 
 - F1-Score test data : 0.720
 - F1-Score setelah hyperparameter tuning : 0.757
 
-# Rekomendasi
-- Berdasarkan Tenure, churn banyak terjadi di awal 0-2 bulan pemakaian platform, maka perusahaan dapat memberikan survey awal pemakaian platform di awal bulan 1 agar dapat ditelusuri lebih dalam penyebab churn kenapa.
-- Berdasarkan Complain, customer yang churn lebih banyak complain, maka tim customer service harus ekstra sabar dalam menghadapi complain dan membuat tim customer service dibagi menjadi 3 shift kerja agar dapat 24 jam melayani customer yang complain.
-- Berdasarkan DaySinceLastOrder, banyak customer churn dihari 1-2 terakhir order dan orderannya adalah kebanyakan churn dari kategori mobile phone. Maka perbanyak kategori barang agar lebih menarik customer.
+# Recommendation for E-Commerce
+1. Menggunakan jumlah total cashback yang sama tetapi alokasi yang berbeda, seperti menurunkan 4% Cashback pada jumlah customer tidak churn dan meningkatkan 20% Cashback pada jumlah customer Churn. Biayanya hampir sama dengan biaya pemasaran.
+2. Membatasi jumlah device yang terhubung.
+3. Memberikan penawaran alokasi 10% cashback pada customer churn dan 10% potongan ongkos kirim (total 20%) pada potensi customer churn yang memiliki jarak dari warehouse ke rumah customer yang jauh.
+4.Berdasarkan tenure bahwa customer yang churn banyak terjadi di 0-2 bulan, maka dapat dilakukan survey pada customer baru di awal 1 bulan pemakaian agar alasan customer churn bisa diketahui lebih dalam, kenapa banyak churn di bulan-bulan pertama pemakaian platform.
+5. Berdasarkan hari terakhir, banyak customer churn dihari 1-2 terakhir order dan orderannya adalah kebanyakan churn dari kategori mobile phone. Maka perbanyak kategori barang agar lebih menarik customer.
+6. Berdasarkan complain, customer yang churn lebih banyak complain, maka tim customer service harus ekstra sabar dalam menghadapi complain dan membuat tim customer service dibagi menjadi 3 shift kerja agar dapat 24 jam melayani customer yang complain.
+
+# Recommendation for Model
+1. Menambahkan feature 'age' agar bisa diketahui alasan di balik churn paling banyak di umur berapa dan agar bisa diketahui apakah churn tersebut tipe voluntary atau involuntary. Involuntary churn adalah customer yang pindah dari platform berdasarkan faktor eksternal seperti berpindah lokasi, kematian, dll. Sedangkan voluntary churn adalah customer yang berpindah dari platform karena sengaja berhenti maupun sengaja beralih ke platform lain. Saya rasa feature age dapat menjadi feature yang cukup berpengaruh penting untuk ditambahkan dalam memprediksi churn
+2. Menambahkan data dikelas 1 (churn) agar model dapat belajar dari banyak data.
+3. Mencoba menggunakan algoritma machine learning lain yang belum dicoba, dan menerapkan langkah langkah seperti feature select by feature importances/coef
+4. Mencoba menggunakan threshold
+5. Mencoba metode oversampling lain seperti RandomOversampling
+6. Mencoba untuk tidak drop semua outlier yang ada
